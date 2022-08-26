@@ -129,12 +129,21 @@ opacity: 1;
     min-height: 50vh;
     background-color: var(--second-color);
 }
+.stage.darkMode{
+    background-color: white;
+}
 
 .ball{
     margin: auto;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+    background-color: var(--main-color);
+    border: 4px solid white;
+    background-color: var(--main-color);
+}
+.ball.darkMode{
+    border: 4px solid black;
     background-color: var(--main-color);
 }
 
@@ -146,3 +155,62 @@ opacity: 1;
     border-radius: 5%;
 }
 
+
+/* ////////////////// BTN SCROLL ////////////////// */
+
+.scroll-top-btn{
+    position: fixed;
+    bottom: 1vh;
+    right: 5vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border: 0;
+    font-size: 2rem;
+}
+.scroll-top-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* ////////////////// dark mode ////////////////// */
+
+.btn-dark{
+    position: fixed;
+    bottom: 1vh;
+    left: 5vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border: 0;
+    font-size: 2rem;
+    border: 1px solid white;
+}
+.btn-dark:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.darkMode{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}

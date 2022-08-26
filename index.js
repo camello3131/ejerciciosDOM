@@ -671,7 +671,9 @@ const hablar = (texto) => speechSynthesis.speak (new SpeechSynthesisUtterance(te
 
 hablar (texto)
 */
+import { scrollTopBtn } from "./dom/btn_scroll.js";
 import countDown from "./dom/countDown.js";
+import { darkMode } from "./dom/darkMode.js";
 import hamburgerMenu from "./dom/menu_hamburguesa.js";
 import { reloj, alarma } from "./dom/reloj_alarma.js";
 import { moveBall } from "./dom/teclado.js"
@@ -683,8 +685,12 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     reloj("#reloj", "#activar", "#frenar");
     alarma("assets/alarma.mp3", "#activar-audio", "#frenar-audio");
     countDown("countdown", "Nov 20, 2022 13:00:00", "Empezo el mundial!!!!")
+    scrollTopBtn(".scroll-top-btn")
 })
+    
 
 d.addEventListener("keydown", (e) => {
     moveBall(e, ".ball", ".stage")
 })
+
+darkMode(".btn-dark", "darkMode")
