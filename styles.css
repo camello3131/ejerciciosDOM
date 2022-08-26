@@ -63,6 +63,7 @@ img{
     background-color: var(--second-modal-color);
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translate(0, -100%);
+    overflow-y: auto;
 }
 .panel.is-active{
 transform: translate(0,0);

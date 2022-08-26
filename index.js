@@ -677,6 +677,8 @@ import { darkMode } from "./dom/darkMode.js";
 import hamburgerMenu from "./dom/menu_hamburguesa.js";
 import { reloj, alarma } from "./dom/reloj_alarma.js";
 import { moveBall } from "./dom/teclado.js"
+import responsiveMedia from "./dom/objetoResponsive.js"
+import getGeolocation from "./dom/geolocalizacion.js";
 
 const d = document;
 
@@ -686,8 +688,18 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     alarma("assets/alarma.mp3", "#activar-audio", "#frenar-audio");
     countDown("countdown", "Nov 20, 2022 13:00:00", "Empezo el mundial!!!!")
     scrollTopBtn(".scroll-top-btn")
+    responsiveMedia("youtube", 
+    "(min-width: 1024px)", 
+    `<a href="https://www.youtube.com/embed/eQGG1vp7AEk">Ver Video</a>`, 
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/eQGG1vp7AEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    )
+    responsiveMedia("gmaps",
+    "(min-width: 1024px)", 
+    `<a href="https://goo.gl/maps/55sjitMAQeeDo3WL9">Ver Mapa</a>`, 
+    `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1395920.8612193477!2d-116.2844521152903!3d37.86116133226967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2s%C3%81rea%2051%2C%20Nevada%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1661494672382!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+    )
+    getGeolocation("geolocation")
 })
-    
 
 d.addEventListener("keydown", (e) => {
     moveBall(e, ".ball", ".stage")
