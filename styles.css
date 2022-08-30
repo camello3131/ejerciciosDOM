@@ -32,6 +32,7 @@ img{
 /* ///////// MENU HAMBURGUESA ////////////  */
 
 .header{
+    z-index: 997;
     position: sticky;
     top: 0;
     padding: 1rem;
@@ -214,4 +215,96 @@ opacity: 1;
 .darkMode{
     background-color: var(--second-color);
     color: var(--main-color);
+}
+
+/* ////////////////// search filters ////////////////// */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption {
+    padding: 1rem;
+}
+
+.filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+
+/* ////////////////// slider responsive ////////////////// */
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slider-slides {
+    height: 400px;
+    position: relative;
+}
+
+.slider-slide img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.slider-slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: thin solid black;
+    text-decoration: none;
+    background-color: white;
+    color: #222;
+    transition: all 0.3s ease;
+}
+
+.slider a:hover {
+    color: gray;
+}
+
+.slider-btns{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-weight: bold;
 }

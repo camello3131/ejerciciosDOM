@@ -679,6 +679,9 @@ import { reloj, alarma } from "./dom/reloj_alarma.js";
 import { moveBall } from "./dom/teclado.js"
 import responsiveMedia from "./dom/objetoResponsive.js"
 import getGeolocation from "./dom/geolocalizacion.js";
+import searchFilters from "./dom/filtro_busqueda.js";
+import draw from "./dom/sorteo.js";
+import carrusel from "./dom/slider.js";
 
 const d = document;
 
@@ -699,6 +702,9 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1395920.8612193477!2d-116.2844521152903!3d37.86116133226967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2s%C3%81rea%2051%2C%20Nevada%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1661494672382!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
     )
     getGeolocation("geolocation")
+    searchFilters(".card-filter", ".card")
+    draw("#winner-btn", ".player")
+    carrusel();
 })
 
 d.addEventListener("keydown", (e) => {
