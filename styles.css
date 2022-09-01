@@ -308,3 +308,142 @@ opacity: 1;
     font-size: 3rem;
     font-weight: bold;
 }
+
+
+/* ////////////////// scroll spy ////////////////// */
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main panel";
+    }
+    main {
+        grid-area: main;
+    }
+    .header {
+        grid-area: header;
+    }
+    .panel {
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0,0);
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--second-color);
+        justify-content: flex-start;
+        align-self: start;
+    }
+    .panel-btn {
+        display: none;
+    }
+    .menu {
+        justify-content: start;
+        text-align: right;
+    }
+    .menu a{
+        font-size: 1rem;
+        padding: .75rem;
+    }
+    .menu a:hover,
+    .menu a.active {
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+    .scroll-top-btn{
+        right: initial;
+        margin-left: 20px;
+    }
+}
+/* ////////////////// VIDEO INTELIGENTE ////////////////// */
+
+#video2{
+    width: 100%;
+    margin-top: 200px;
+}
+
+/* ////////////////// FORMULARIO ////////////////// */
+
+.contact_form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact_form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact_form textarea {
+    resize: none;
+}
+
+.contact_form legend, 
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact_form input,
+.contact_form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact_form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact_form *::placeholder {
+    color: black
+}
+
+.contact_form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+.contact_form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+    margin-top: -1;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.contact-form-loader img{
+    height: 30px;
+}

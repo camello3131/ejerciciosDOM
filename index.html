@@ -17,18 +17,21 @@
     </button>
     <aside class="panel">
         <nav class="menu">
-            <a href="#section1">RELOJ DIGITAL Y ALARMA</a>
-            <a href="#section2">MOVER PELOTA</a>
-            <a href="#section3">CUENTA REGRESIVA</a>
-            <a href="#section4">RESPONSIVE CON JS</a>
-            <a href="#section5">GEOLOCALIZACION</a>
-            <a href="#section6">BUSCADOR</a>
-            <a href="#section7">SORTEO DIGITAL</a>
-            <a href="#section8">SLIDER RESPONSIVE</a>
+            <a href="#section1" data-scroll-spy>RELOJ DIGITAL Y ALARMA</a>
+            <a href="#section2" data-scroll-spy>MOVER PELOTA</a>
+            <a href="#section3" data-scroll-spy>CUENTA REGRESIVA</a>
+            <a href="#section4" data-scroll-spy>RESPONSIVE CON JS</a>
+            <a href="#section5" data-scroll-spy>GEOLOCALIZACION</a>
+            <a href="#section6" data-scroll-spy>BUSCADOR</a>
+            <a href="#section7" data-scroll-spy>SORTEO DIGITAL</a>
+            <a href="#section8" data-scroll-spy>SLIDER RESPONSIVE</a>
+            <a href="#section9" data-scroll-spy>VIDEO INTELIGENTE</a>
+            <a href="#section10" data-scroll-spy>VALIDACION DE FORMULARIOS</a>
+            <a href="#section11" data-scroll-spy>NARRADOR</a>
         </nav>
     </aside>
     <main>
-        <section id="section1" class="section">
+        <section id="section1" class="section" data-scroll-spy>
             <h2>Reloj digital y alarma</h2>
             <div id="reloj"></div>
             <div class="buttons">
@@ -38,26 +41,26 @@
                 <button id="frenar-audio">Frenar alarma</button>
             </div>
         </section>
-        <section id="section2" class="section">
+        <section id="section2" class="section" data-scroll-spy>
             <h2>MOVER PELOTA</h2>
             <article class="stage" data-dark>
                 <div class="ball" data-dark></div>
             </article>
         </section>
-        <section id="section3" class="section">
+        <section id="section3" class="section" data-scroll-spy>
             <h2>CUENTA Regresiva</h2>
             <div id="countdown"></div>
         </section>
-        <section id="section4" class="section">
+        <section id="section4" class="section" data-scroll-spy>
             <h2>Responsive con JS</h2>
             <div id="youtube"></div>
             <div id="gmaps"></div>
         </section>
-        <section id="section5" class="section">
+        <section id="section5" class="section" data-scroll-spy>
             <h2>GEOLOCALIZACION</h2>
             <div id="geolocation"></div>
         </section>
-        <section id="section6" class="section">
+        <section id="section6" class="section" data-scroll-spy>
             <h2>BUSCADOR</h2>
             <input type="search" placeholder="Buscar.." class="card-filter">
             <article class="cards">
@@ -93,7 +96,7 @@
                 </figure>
             </article>
         </section>
-        <section id="section7" class="section">
+        <section id="section7" class="section" data-scroll-spy>
             <h2>SORTEO DIGITAL</h2>
             <ul class="players">
                 <li class="player">JavaScript</li>
@@ -108,9 +111,9 @@
             </ul>
             <button id="winner-btn">Obtener Ganador</button>
         </section>
-        <section id="section8" class="section">
+        <section id="section8" class="section" data-scroll-spy>
             <h2>RESPONSIVE SLIDER</h2>
-            <div class="slider">
+            <div class="sldider">
                 <div class="slider-slides">
                     <div class="slider-slide active">
                         <img src="https://placeimg.com/400/400/animals" alt="animals">
@@ -134,6 +137,45 @@
                     <a class="next" href="#">&raquo;</a>
                 </div>
             </div>
+        </section>
+        <section id="section9" class="section" data-scroll-spy>
+            <h2>Video Inteligente</h2>
+            <video src="/assets/291945626_1146870586044822_4355807333270875266_n.mp4" controls muted data-smart-video autoplay></video>
+        </section>
+        <section class="section">
+            <video id="video2" src="/assets/236046782_588872615821835_2617315895808611351_n.mp4" controls muted loop autoplay data-smart-video></video>
+        </section>
+
+        <section id="section10" class="section" data-scroll-spy>
+            <h2>VALIDACION DE FORMULARIOS</h2>
+            <form action="https://formsubmit.co/8d96378f531f4dc864b9b79d63d90635" target="_blank" method="POST" class="contact_form">
+                <legend>Envianos tus comentarios</legend>
+                <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Ingresa tu E-mail" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="subject" placeholder="Ingrese asunto" title="El asunto es requerido" required>
+                <textarea name="comments" cols="50" rows="5" placeholder="Ingrese comentario" data-pattern="^.{1,255}$" title="Tu comentario no debe exceder los 255 caracteres" required></textarea>
+                <input type="submit">
+                
+                <div class="contact-form-loader none">
+                    <img src="/assets/circles.svg" alt="Cargando">
+                </div>
+                <div class="contact-form-response none">
+                    <p>Los datos fueron enviados</p>
+                </div>
+            </form>
+        </section>
+
+        <section id="section11" class="section" data-scroll-spy="">
+            <h2>NARRADOR DE VOZ</h2>
+            <select name="" id="speech-select">
+                <option value="">----Elige una voz----</option>
+                <br>
+                <br>
+                <textarea name="" id="speech-text" cols="150" rows="5" placeholder="Ingresa texto para leer"></textarea>
+                <br>
+                <br>
+                <button id="speech-btn">Leer texto</button>
+            </select>
         </section>
     </main>
     <button class="scroll-top-btn hidden">&#11014</button>

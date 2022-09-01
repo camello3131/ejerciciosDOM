@@ -682,6 +682,10 @@ import getGeolocation from "./dom/geolocalizacion.js";
 import searchFilters from "./dom/filtro_busqueda.js";
 import draw from "./dom/sorteo.js";
 import carrusel from "./dom/slider.js";
+import scrollSpy from "./dom/scrollSpy.js";
+import smartVideo from "./dom/video_inteligente.js";
+import contactFormValid from "./dom/validaciones_formulario.js";
+import speechReader from "./dom/narrador.js";
 
 const d = document;
 
@@ -704,7 +708,10 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     getGeolocation("geolocation")
     searchFilters(".card-filter", ".card")
     draw("#winner-btn", ".player")
-    carrusel();
+    carrusel()
+    scrollSpy()
+    smartVideo()
+    contactFormValid()
 })
 
 d.addEventListener("keydown", (e) => {
@@ -712,3 +719,4 @@ d.addEventListener("keydown", (e) => {
 })
 
 darkMode(".btn-dark", "darkMode")
+speechReader()
